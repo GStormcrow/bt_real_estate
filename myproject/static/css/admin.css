@@ -1,0 +1,17 @@
+#header {
+    min-height: 50px;
+    color: aliceblue;
+    background-color: blueviolet;
+}
+
+div.breadcrumbs {
+    background-color: rgb(66,43,13);
+}
+
+div.breadcrumbs a {
+    color: red;   
+}
+
+.module caption {
+    background-color: blue;
+}
