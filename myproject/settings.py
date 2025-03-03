@@ -22,17 +22,18 @@ DB_PASSWORD = os.getenv('DB_PASSWORD')
 DB_HOST = os.getenv('DB_HOST')
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-bwovq8lbi4n*4*a$d#&1pw85ozrx%r+^4@3_c)z0(!5mi6^$^='
+SECRET_KEY = SECRET_KEY
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['btrealestate-production-c269.up.railway.app']
 
 
 # Application definition
@@ -105,10 +106,10 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'btre_backup',
-        'USER': 'postgres',
+        'NAME': 'defaultdb',
+        'USER': 'avnadmin',
         'PASSWORD':DB_PASSWORD,
-        'PORT':'5432',
+        'PORT':'17748',
         'HOST':DB_HOST,
     }
 }
