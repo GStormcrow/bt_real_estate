@@ -14,13 +14,7 @@ from pathlib import Path
 import os
 from dotenv import load_dotenv
 from supabase import create_client
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-if not SUPABASE_URL:
-     raise ValueError("SUPABASE_URL is not set in environment variables")
- 
- # Create Supabase Client
-supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -31,7 +25,13 @@ DB_HOST = os.getenv('DB_HOST')
 EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 SECRET_KEY = os.getenv('SECRET_KEY')
-
+SUPABASE_URL = os.getenv("SUPABASE_URL")
+SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+if not SUPABASE_URL:
+     raise ValueError("SUPABASE_URL is not set in environment variables")
+ 
+ # Create Supabase Client
+supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
